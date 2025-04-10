@@ -129,9 +129,10 @@ ul, ol {
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: all var(--transition-speed);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -150,8 +151,10 @@ ul, ol {
     justify-content: space-between;
     align-items: center;   
     min-height: 100vh;
-    padding-top: 6rem;
-    gap: 4rem;
+    padding-top: 3rem;
+    gap: 10px;
+    margin-right: 3rem;
+    margin-left: 2rem;
 }
 
 .home-content {
@@ -166,6 +169,8 @@ ul, ol {
 .home-content h1 {
     margin-bottom: 1rem;
     line-height: 1.2;
+    font-size: clamp(2rem, 5vw, 4rem);
+
 }
 
 .home-content h3 {
@@ -274,6 +279,7 @@ span {
     box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
     transition: all 0.5s ease-in-out;
+    
 }
 
 .home-img img:hover {
@@ -283,6 +289,29 @@ span {
         0 0 100px var(--main-color);
     transform: scale(1.05);
 }
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column-reverse; 
+        text-align: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 2rem 1rem;
+        margin-top: 12rem;
+    }
+
+    .home-content {
+        align-items: center;
+        margin: 0;
+    }
+
+    .home-img {
+        margin: 0;
+    }
+}
+
+
+/* About section */
 
 .about-section {
     max-width: 900px;
@@ -354,10 +383,19 @@ span {
 
 /* Projects Section */ 
 .projects-section {
-    display: flex; 
-    flex-direction: row;
-    overflow-x: auto;
     padding: 2rem;
+}
+
+.project-container{
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+}
+
+.projects-section h2{
+    text-align: center;
+    margin-bottom: 1.2rem;
+    
 }
 
 .project-card {
@@ -369,6 +407,7 @@ span {
     flex: 0 0 auto; 
     background-color: #ffffffd1;
 }
+
 
 .project-card img {
     width: 100%;
@@ -525,7 +564,7 @@ span {
 .impacts-section {
     padding: 5rem 3rem;
     background: linear-gradient(to bottom, var(--bg-color), #0d2340);
-    max-width: 1100px;
+    max-width: 100%;
     margin: 4rem auto;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);

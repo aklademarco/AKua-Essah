@@ -32,6 +32,23 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+// impact item 
+const impactItems = document.querySelectorAll('.impact-item');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  impactItems.forEach(item => {
+    observer.observe(item);
+  });
 // Web3Forms Contact Form Submission
 const contactForm = document.getElementById('contact-form'); // make sure your form has this ID
 
