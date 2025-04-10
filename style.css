@@ -19,13 +19,12 @@
     --transition-speed: 0.3s;
 }
 
-html {
+/* Global Styles */
+
+html,body {
     height: 100%;
     scroll-behavior: smooth;
     font-size: 16px;
-}
-
-body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
