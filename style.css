@@ -314,9 +314,9 @@ span {
 /* About section */
 
 .about-section {
-    max-width: 900px;
+    max-width: 100%;
     margin: 4rem auto;
-    padding: 3rem;
+    padding: 1.7rem;
     background-color: var(--dark-bg);
     color: #fff;
     border-radius: 20px;
