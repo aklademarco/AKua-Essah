@@ -78,4 +78,4 @@ if (contactForm) {
 }
 
 // Dynamic Year in Footer
-document.getElementById('yearValue').textContent = new Date().getFullYear();
+document.getElementById('footer-text').textContent = new Date().getFullYear();
