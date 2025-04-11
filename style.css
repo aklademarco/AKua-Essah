@@ -185,12 +185,17 @@ span {
 
 .text-animation {
     position: relative;
+    display: inline-block;
     overflow: hidden;
+    max-width: 100%;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    box-sizing: border-box;
 }
 
 .text-animation::after {
     content: '';
-    position: absolute;
+    position:absolute;
+    top: 0;
     left: 0;
     height: 100%;
     width: 100%;
@@ -199,12 +204,23 @@ span {
     animation: typing 6s steps(30) infinite;
 }
 
+
 @keyframes typing {
     100% {
-        left: 100%;
+        transform: translateX(100%);
     }
 }
 
+
+@media screen and (max-width: 600px) {
+    .text-animation{
+        max-width: 100%;
+        font-size: 3vw;
+    }
+    .text-animation::after {
+        animation: 4s steps(25) infinite;
+    }
+  }
 .social-media {
     display: flex;
     gap: 1.5rem;
