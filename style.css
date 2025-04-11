@@ -175,7 +175,7 @@ ul, ol {
 
 .home-content h3 {
     margin-bottom: 2rem;
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: clamp(1rem, 3vw, 2rem);
     font-weight: 500;
 }
 
@@ -188,20 +188,19 @@ span {
     display: inline-block;
     overflow: hidden;
     max-width: 100%;
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
     box-sizing: border-box;
 }
 
 .text-animation::after {
     content: '';
     position:absolute;
-    top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     background-color: var(--bg-color);
     border-left: 2px solid var(--main-color);
-    animation: typing 6s steps(30) infinite;
+    animation: typing 8s steps(30) infinite;
+    transform: translateX(0);
 }
 
 
@@ -215,10 +214,7 @@ span {
 @media screen and (max-width: 600px) {
     .text-animation{
         max-width: 100%;
-        font-size: 3vw;
-    }
-    .text-animation::after {
-        animation: 4s steps(25) infinite;
+        font-size: 4vw;
     }
   }
 .social-media {
