@@ -50,11 +50,11 @@ const impactItems = document.querySelectorAll('.impact-item');
     observer.observe(item);
   });
 // Web3Forms Contact Form Submission
-const contactForm = document.getElementById('contact-form'); // make sure your form has this ID
+const contactForm = document.getElementById('contact-form');  
 
 if (contactForm) {
     contactForm.addEventListener("submit", async function (e) {
-        e.preventDefault(); // prevent page reload
+        e.preventDefault(); 
         const formData = new FormData(contactForm);
 
         try {
@@ -67,7 +67,7 @@ if (contactForm) {
 
             if (result.success) {
                 alert("Message sent successfully!");
-                contactForm.reset(); // Clear the form
+                contactForm.reset(); 
             } else {
                 alert("Failed to send message. Please try again.");
             }
